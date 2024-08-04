@@ -1,0 +1,704 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sudoku</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sudoku</h1>
+      <div>
+        <h1 id="solved"></h1>
+      </div>
+      <p id="timer">0 : 0 : 0</p>
+
+      <table class="first-table">
+        <tr>
+          <td>
+            <input type="text" id="text-0-0" data-row="0" data-col="0" />
+          </td>
+          <td>
+            <input type="text" id="text-0-1" data-row="0" data-col="1" />
+          </td>
+          <td>
+            <input type="text" id="text-0-2" data-row="0" data-col="2" />
+          </td>
+          <td>
+            <input type="text" id="text-0-3" data-row="0" data-col="3" />
+          </td>
+          <td>
+            <input type="text" id="text-0-4" data-row="0" data-col="4" />
+          </td>
+          <td>
+            <input type="text" id="text-0-5" data-row="0" data-col="5" />
+          </td>
+          <td>
+            <input type="text" id="text-0-6" data-row="0" data-col="6" />
+          </td>
+          <td>
+            <input type="text" id="text-0-7" data-row="0" data-col="7" />
+          </td>
+          <td>
+            <input type="text" id="text-0-8" data-row="0" data-col="8" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" id="text-1-0" data-row="1" data-col="0" />
+          </td>
+          <td>
+            <input type="text" id="text-1-1" data-row="1" data-col="1" />
+          </td>
+          <td>
+            <input type="text" id="text-1-2" data-row="1" data-col="2" />
+          </td>
+          <td>
+            <input type="text" id="text-1-3" data-row="1" data-col="3" />
+          </td>
+          <td>
+            <input type="text" id="text-1-4" data-row="1" data-col="4" />
+          </td>
+          <td>
+            <input type="text" id="text-1-5" data-row="1" data-col="5" />
+          </td>
+          <td>
+            <input type="text" id="text-1-6" data-row="1" data-col="6" />
+          </td>
+          <td>
+            <input type="text" id="text-1-7" data-row="1" data-col="7" />
+          </td>
+          <td>
+            <input type="text" id="text-1-8" data-row="1" data-col="8" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" id="text-2-0" data-row="2" data-col="0" />
+          </td>
+          <td>
+            <input type="text" id="text-2-1" data-row="2" data-col="1" />
+          </td>
+          <td>
+            <input type="text" id="text-2-2" data-row="2" data-col="2" />
+          </td>
+          <td>
+            <input type="text" id="text-2-3" data-row="2" data-col="3" />
+          </td>
+          <td>
+            <input type="text" id="text-2-4" data-row="2" data-col="4" />
+          </td>
+          <td>
+            <input type="text" id="text-2-5" data-row="2" data-col="5" />
+          </td>
+          <td>
+            <input type="text" id="text-2-6" data-row="2" data-col="6" />
+          </td>
+          <td>
+            <input type="text" id="text-2-7" data-row="2" data-col="7" />
+          </td>
+          <td>
+            <input type="text" id="text-2-8" data-row="2" data-col="8" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" id="text-3-0" data-row="3" data-col="0" />
+          </td>
+          <td>
+            <input type="text" id="text-3-1" data-row="3" data-col="1" />
+          </td>
+          <td>
+            <input type="text" id="text-3-2" data-row="3" data-col="2" />
+          </td>
+          <td>
+            <input type="text" id="text-3-3" data-row="3" data-col="3" />
+          </td>
+          <td>
+            <input type="text" id="text-3-4" data-row="3" data-col="4" />
+          </td>
+          <td>
+            <input type="text" id="text-3-5" data-row="3" data-col="5" />
+          </td>
+          <td>
+            <input type="text" id="text-3-6" data-row="3" data-col="6" />
+          </td>
+          <td>
+            <input type="text" id="text-3-7" data-row="3" data-col="7" />
+          </td>
+          <td>
+            <input type="text" id="text-3-8" data-row="3" data-col="8" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" id="text-4-0" data-row="4" data-col="0" />
+          </td>
+          <td>
+            <input type="text" id="text-4-1" data-row="4" data-col="1" />
+          </td>
+          <td>
+            <input type="text" id="text-4-2" data-row="4" data-col="2" />
+          </td>
+          <td>
+            <input type="text" id="text-4-3" data-row="4" data-col="3" />
+          </td>
+          <td>
+            <input type="text" id="text-4-4" data-row="4" data-col="4" />
+          </td>
+          <td>
+            <input type="text" id="text-4-5" data-row="4" data-col="5" />
+          </td>
+          <td>
+            <input type="text" id="text-4-6" data-row="4" data-col="6" />
+          </td>
+          <td>
+            <input type="text" id="text-4-7" data-row="4" data-col="7" />
+          </td>
+          <td>
+            <input type="text" id="text-4-8" data-row="4" data-col="8" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" id="text-5-0" data-row="5" data-col="0" />
+          </td>
+          <td>
+            <input type="text" id="text-5-1" data-row="5" data-col="1" />
+          </td>
+          <td>
+            <input type="text" id="text-5-2" data-row="5" data-col="2" />
+          </td>
+          <td>
+            <input type="text" id="text-5-3" data-row="5" data-col="3" />
+          </td>
+          <td>
+            <input type="text" id="text-5-4" data-row="5" data-col="4" />
+          </td>
+          <td>
+            <input type="text" id="text-5-5" data-row="5" data-col="5" />
+          </td>
+          <td>
+            <input type="text" id="text-5-6" data-row="5" data-col="6" />
+          </td>
+          <td>
+            <input type="text" id="text-5-7" data-row="5" data-col="7" />
+          </td>
+          <td>
+            <input type="text" id="text-5-8" data-row="5" data-col="8" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" id="text-6-0" data-row="6" data-col="0" />
+          </td>
+          <td>
+            <input type="text" id="text-6-1" data-row="6" data-col="1" />
+          </td>
+          <td>
+            <input type="text" id="text-6-2" data-row="6" data-col="2" />
+          </td>
+          <td>
+            <input type="text" id="text-6-3" data-row="6" data-col="3" />
+          </td>
+          <td>
+            <input type="text" id="text-6-4" data-row="6" data-col="4" />
+          </td>
+          <td>
+            <input type="text" id="text-6-5" data-row="6" data-col="5" />
+          </td>
+          <td>
+            <input type="text" id="text-6-6" data-row="6" data-col="6" />
+          </td>
+          <td>
+            <input type="text" id="text-6-7" data-row="6" data-col="7" />
+          </td>
+          <td>
+            <input type="text" id="text-6-8" data-row="6" data-col="8" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" id="text-7-0" data-row="7" data-col="0" />
+          </td>
+          <td>
+            <input type="text" id="text-7-1" data-row="7" data-col="1" />
+          </td>
+          <td>
+            <input type="text" id="text-7-2" data-row="7" data-col="2" />
+          </td>
+          <td>
+            <input type="text" id="text-7-3" data-row="7" data-col="3" />
+          </td>
+          <td>
+            <input type="text" id="text-7-4" data-row="7" data-col="4" />
+          </td>
+          <td>
+            <input type="text" id="text-7-5" data-row="7" data-col="5" />
+          </td>
+          <td>
+            <input type="text" id="text-7-6" data-row="7" data-col="6" />
+          </td>
+          <td>
+            <input type="text" id="text-7-7" data-row="7" data-col="7" />
+          </td>
+          <td>
+            <input type="text" id="text-7-8" data-row="7" data-col="8" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" id="text-8-0" data-row="8" data-col="0" />
+          </td>
+          <td>
+            <input type="text" id="text-8-1" data-row="8" data-col="1" />
+          </td>
+          <td>
+            <input type="text" id="text-8-2" data-row="8" data-col="2" />
+          </td>
+          <td>
+            <input type="text" id="text-8-3" data-row="8" data-col="3" />
+          </td>
+          <td>
+            <input type="text" id="text-8-4" data-row="8" data-col="4" />
+          </td>
+          <td>
+            <input type="text" id="text-8-5" data-row="8" data-col="5" />
+          </td>
+          <td>
+            <input type="text" id="text-8-6" data-row="8" data-col="6" />
+          </td>
+          <td>
+            <input type="text" id="text-8-7" data-row="8" data-col="7" />
+          </td>
+          <td>
+            <input type="text" id="text-8-8" data-row="8" data-col="8" />
+          </td>
+        </tr>
+      </table>
+      <table class="second-table">
+        <tr>
+          <td>
+            <input type="button" id="input1" value="1" />
+          </td>
+          <td>
+            <input type="button" id="input2" value="2" />
+          </td>
+          <td>
+            <input type="button" id="input3" value="3" />
+          </td>
+          <td>
+            <input type="button" id="input4" value="4" />
+          </td>
+          <td>
+            <input type="button" id="input5" value="5" />
+          </td>
+          <td>
+            <input type="button" id="input6" value="6" />
+          </td>
+          <td>
+            <input type="button" id="input7" value="7" />
+          </td>
+          <td>
+            <input type="button" id="input8" value="8" />
+          </td>
+          <td>
+            <input type="button" id="input9" value="9" />
+          </td>
+          <td>
+            <input type="button" id="inputx" value="" />
+          </td>
+        </tr>
+      </table>
+      <button id="solve">Check Sudoku</button>
+      <button id="startOver">New Sudoku</button>
+    </div>
+  </body>
+</html>
+
+<script>
+  class Sudoku {
+    constructor() {
+      this.rowSet = new Map();
+      this.colSet = new Map();
+      this.rcSet = new Map();
+      this.red = new Set();
+      this.ready = new Set();
+      this.board = [];
+      this.time = "";
+      for (let r = 0; r < 9; r++) {
+        this.board[r] = [];
+        for (let c = 0; c < 9; c++) {
+          this.board[r][c] = "";
+        }
+      }
+    }
+
+    isAvail(row, col, value) {
+      if (!this.rowSet.has(row)) {
+        this.rowSet.set(row, new Set());
+      }
+
+      if (!this.colSet.has(col)) {
+        this.colSet.set(col, new Set());
+      }
+
+      const rcKey = `${Math.floor(row / 3)}-${Math.floor(col / 3)}`;
+      if (!this.rcSet.has(rcKey)) {
+        this.rcSet.set(rcKey, new Set());
+      }
+      return (
+        !this.rowSet.get(row).has(value) &&
+        !this.colSet.get(col).has(value) &&
+        !this.rcSet
+          .get(`${Math.floor(row / 3)}-${Math.floor(col / 3)}`)
+          .has(value)
+      );
+    }
+
+    async checkAnswer() {
+      let rowSet = new Map(this.rowSet);
+      let colSet = new Map(this.colSet);
+      let rcSet = new Map(this.rcSet);
+      let num_set = new Set(["1", "2", "3", "4", "5", "6", "7", "8", "9"]);
+      for (let r = 0; r < 9; r++) {
+        for (let c = 0; c < 9; c++) {
+          const button = document.getElementById(`text-${r}-${c}`);
+          const button_value = button.value;
+          if (
+            (rowSet.has(r) && rowSet.get(r).has(button_value)) ||
+            (rowSet.has(c) && colSet.get(c).has(button_value)) ||
+            (rcSet.has(`${Math.floor(r / 3)}-${Math.floor(c / 3)}`) &&
+              rcSet
+                .get(`${Math.floor(r / 3)}-${Math.floor(c / 3)}`)
+                .has(button_value)) ||
+            button_value === "" ||
+            !num_set.has(button_value)
+          ) {
+            document.getElementById("solved").innerHTML =
+              "Fail! Fix the sudoku";
+            return false;
+          }
+          if (!rowSet.has(r)) {
+            rowSet.set(r, new Set());
+          }
+          rowSet.get(r).add(button_value);
+
+          if (!colSet.has(c)) {
+            colSet.set(c, new Set());
+          }
+          colSet.get(c).add(button_value);
+
+          const rcKey = `${Math.floor(r / 3)}-${Math.floor(c / 3)}`;
+          if (!rcSet.has(rcKey)) {
+            rcSet.set(rcKey, new Set());
+          }
+          rcSet.get(rcKey).add(button_value);
+        }
+      }
+      document.getElementById("solved").innerHTML =
+        "Solved : " + document.getElementById("timer").textContent;
+      return true;
+    }
+
+    addValue(row, col, value) {
+      if (!this.rowSet.has(row)) {
+        this.rowSet.set(row, new Set());
+      }
+      this.rowSet.get(row).add(value);
+
+      if (!this.colSet.has(col)) {
+        this.colSet.set(col, new Set());
+      }
+      this.colSet.get(col).add(value);
+
+      const rcKey = `${Math.floor(row / 3)}-${Math.floor(col / 3)}`;
+      if (!this.rcSet.has(rcKey)) {
+        this.rcSet.set(rcKey, new Set());
+      }
+      this.rcSet.get(rcKey).add(value);
+    }
+
+    removeValue(row, col, value) {
+      this.rowSet.get(row).delete(value);
+      this.colSet.get(col).delete(value);
+      const rcKey = `${Math.floor(row / 3)}-${Math.floor(col / 3)}`;
+      this.rcSet.get(rcKey).delete(value);
+    }
+
+    dfs(row, col) {
+      if (row === this.board.length) {
+        return true;
+      }
+      if (col === this.board[0].length) {
+        return this.dfs(row + 1, 0);
+      }
+      let row_array = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
+      row_array.sort((a, b) => 0.5 - Math.random());
+      if (this.board[row][col] === "") {
+        for (let i = 0; i < 8; i++) {
+          const strI = row_array[i];
+          if (this.isAvail(row, col, strI)) {
+            this.addValue(row, col, strI);
+            this.board[row][col] = strI;
+            if (this.dfs(row, col + 1)) {
+              return true;
+            }
+            this.removeValue(row, col, strI);
+            this.board[row][col] = "";
+          }
+        }
+      } else {
+        return this.dfs(row, col + 1);
+      }
+    }
+
+    write(first_button, second_button) {
+      const button = document.getElementById(second_button);
+      const buttonValue = button.value;
+      const myButton = document.getElementById(first_button);
+      myButton.value = buttonValue;
+    }
+
+    show() {
+      while (this.ready.size !== 42) {
+        let r = Math.floor(Math.random() * 9);
+        let c = Math.floor(Math.random() * 9);
+        const buttonId = `text-${r}-${c}`;
+        const myButton = document.getElementById(buttonId);
+        myButton.value = this.board[r][c];
+        this.ready.add(`${r}-${c}`);
+        myButton.style.backgroundColor = "lightgray";
+        document.getElementById(`text-${r}-${c}`).disabled = true;
+      }
+    }
+
+    read() {
+      this.rowSet = new Map();
+      this.colSet = new Map();
+      this.rcSet = new Map();
+      for (let r = 0; r < 9; r++) {
+        for (let c = 0; c < 9; c++) {
+          const buttonId = `text-${r}-${c}`;
+          const myButton = document.getElementById(buttonId);
+          this.board[r][c] = myButton.value;
+          this.addValue(r, c, this.board[r][c]);
+        }
+      }
+    }
+  }
+
+  const sudoku = new Sudoku();
+
+  function startOver() {
+    location.reload();
+  }
+
+  let clickCount = 0;
+  let firstElementId = null;
+  let secondElementId = null;
+
+  function handleClick(button) {
+    const clickedElementId = button.id;
+    if (clickCount === 0 && button.type === "text") {
+      firstElementId = clickedElementId;
+      clickCount++;
+    } else if (clickCount === 1 && button.type === "button") {
+      secondElementId = clickedElementId;
+      clickCount = 0;
+      sudoku.write(firstElementId, secondElementId);
+    } else {
+      firstElementId = clickedElementId;
+    }
+  }
+
+  setInterval(myTimer, 1000);
+
+  var ss = 0;
+  function myTimer() {
+    ss++;
+    let mm = Math.floor(ss / 60);
+    let hh = Math.floor(mm / 60);
+    sudoku.time = "" + (hh % 60) + " : " + (mm % 60) + " : " + (ss % 60);
+    document.getElementById("timer").innerHTML = sudoku.time;
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    document
+      .getElementById("solve")
+      .addEventListener("click", sudoku.checkAnswer);
+    document.getElementById("startOver").addEventListener("click", startOver);
+
+    const first_button = document.querySelectorAll("input[type='text']");
+    first_button.forEach((button) => {
+      button.addEventListener("click", () => handleClick(button));
+    });
+
+    const second_button = document.querySelectorAll("input[type='button']");
+    second_button.forEach((button) => {
+      button.addEventListener("click", () => handleClick(button));
+    });
+    sudoku.dfs(0, 0);
+    sudoku.show();
+    sudoku.read();
+  });
+</script>
+
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    margin: 0;
+    font-family: Arial, sans-serif; /* Added for better font rendering */
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  input[type="text"] {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+    margin: -1.5px;
+  }
+
+  button {
+    width: 150px;
+    height: 30px;
+    font-size: 15px;
+    text-align: center;
+    margin: 10px;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+  }
+
+  .first-table td:nth-child(3),
+  .first-table td:nth-child(6) {
+    border-right: 5px solid #000;
+  }
+  .first-table td:nth-child(4),
+  .first-table td:nth-child(7) {
+    border-left: 5px solid #000;
+  }
+
+  .first-table tr:nth-child(3),
+  .first-table tr:nth-child(6) {
+    border-bottom: 5px solid #000;
+  }
+
+  .first-table tr:nth-child(4),
+  .first-table tr:nth-child(7) {
+    border-top: 5px solid #000;
+  }
+
+  .first-table td:nth-child(9) {
+    border-right: 5px solid #000;
+  }
+  .first-table td:nth-child(1) {
+    border-left: 5px solid #000;
+  }
+
+  .first-table tr:nth-child(9) {
+    border-bottom: 5px solid #000;
+  }
+
+  .first-table tr:nth-child(1) {
+    border-top: 5px solid #000;
+  }
+
+  .second-table {
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 10px;
+  }
+
+  .second-table td {
+    padding: 5px;
+    text-align: center;
+  }
+
+  input[type="button"] {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  #solved {
+    color: red;
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    input[type="text"] {
+      width: 40px;
+      height: 40px;
+      font-size: 24px;
+    }
+
+    button {
+      width: 120px;
+      height: 40px;
+      font-size: 14px;
+    }
+
+    .first-table td,
+    .first-table input[type="text"] {
+      padding: 2px;
+    }
+
+    .second-table {
+      width: 100%;
+      max-width: none;
+      font-size: 20px;
+    }
+
+    input[type="button"] {
+      width: 40px;
+      height: 40px;
+      font-size: 24px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    input[type="text"] {
+      width: 30px;
+      height: 30px;
+      font-size: 18px;
+    }
+
+    button {
+      width: 100px;
+      height: 35px;
+      font-size: 12px;
+    }
+
+    .second-table {
+      font-size: 16px;
+    }
+
+    input[type="button"] {
+      width: 30px;
+      height: 30px;
+      font-size: 18px;
+    }
+
+    h1 {
+      font-size: 20px;
+    }
+  }
+</style>
